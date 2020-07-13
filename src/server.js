@@ -32,7 +32,7 @@ db.on('error', err => {
 app.use('/servicos', servicos);
 app.use('/produtos', produtos);
 
-const port = 3000;
-app.listen(port, () => {
-    console.log('Servidor em execução na porta ' + port);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log('Rodando na porta ${PORT}');
 });
